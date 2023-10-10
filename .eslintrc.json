@@ -1,0 +1,11 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["off", "single"],
+    "comma-dangle": [1, "always-multiline"]
+  }
+}

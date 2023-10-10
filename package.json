@@ -1,0 +1,40 @@
+{
+  "name": "node-ts-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/main.js",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon",
+    "dev:watch": "tsc -w",
+    "test": "vitest",
+    "test:u": "vitest -u",
+    "lint": "eslint --fix ./src/**/*.ts*",
+    "build": "tsc && tsc-alias ",
+    "start": "node  ./build/index.js",
+    "build-and-run": "npm run build && npm run start "
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.6.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.50.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.8",
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.5"
+  },
+  "dependencies": {
+    "js-base64": "^3.7.5"
+  },
+  "author": "MK",
+  "keywords": [],
+  "license": "ISC"
+}
