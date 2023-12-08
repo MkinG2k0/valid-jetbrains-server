@@ -22,7 +22,7 @@ export async function main() {
       }
 
       for (const service of hostPacket.result.services) {
-        const statusCode = service.http.response.status_code
+        const statusCode = service.http?.response?.status_code
 
         if (service.service_name !== 'HTTP') {
           continue
@@ -41,7 +41,12 @@ export async function main() {
       await new Promise((resolve) => setTimeout(resolve, 100))
     }
 
-    console.log(`\n Total addresses found: ${addresses.length} \n result: \n`, addresses)
+    const formatAdress = addresses
+      .map((address) => `\`${address}\``)
+      .join('\n')
+      .concat('\n\n')
+
+    console.log(`\n Total addresses found: ${addresses.length} \n result:\n\n`, formatAdress)
   } catch (error) {
     console.error(error)
   }
